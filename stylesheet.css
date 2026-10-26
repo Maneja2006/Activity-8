@@ -1,0 +1,540 @@
+/* =========================================
+   GENERAL DESIGN
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f7f3e9;
+    color: #25372f;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+header {
+    background-color: #173f35;
+    color: #ffffff;
+    text-align: left;
+    padding: 35px 40px;
+    border-bottom: 6px solid #e8a044;
+}
+
+header h1 {
+    color: #ffffff;
+    font-size: 30px;
+    margin: 0 0 10px 0;
+    letter-spacing: 1px;
+}
+
+header p {
+    color: #ffffff;
+    font-size: 15px;
+    margin: 0;
+}
+
+
+/* =========================================
+   NAVIGATION BAR
+   ========================================= */
+
+nav {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 15px 20px;
+    border-bottom: 2px solid #d8dfd5;
+}
+
+nav a {
+    display: inline-block;
+    color: #173f35;
+    background-color: transparent;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    padding: 10px 18px;
+    margin: 3px;
+
+    border: 2px solid transparent;
+    border-radius: 5px;
+
+    transition: 0.2s ease;
+}
+
+nav a:hover {
+    background-color: #173f35;
+    color: #ffffff;
+
+    border-color: #173f35;
+}
+
+nav a:active {
+    background-color: #0f2d26;
+    color: #ffffff;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
+
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+
+/* =========================================
+   WELCOME / INTRODUCTION
+   ========================================= */
+
+.welcome {
+    background-color: #ffffff;
+
+    padding: 30px;
+
+    margin-bottom: 30px;
+
+    border: 1px solid #d8dfd5;
+    border-left: 6px solid #e8a044;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.welcome h2 {
+    color: #173f35;
+    font-size: 27px;
+
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.welcome h3 {
+    color: #173f35;
+    font-size: 20px;
+
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.welcome p {
+    color: #40574a;
+
+    font-size: 15px;
+    line-height: 1.8;
+
+    margin: 10px 0;
+}
+
+
+/* =========================================
+   NORMAL LINKS INSIDE WELCOME
+   ========================================= */
+
+.welcome p a:not(.emergency-link) {
+    color: #a85d12;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.welcome p a:not(.emergency-link):hover {
+    color: #7c420d;
+}
+
+
+/* =========================================
+   CITY EMERGENCY BUTTONS
+   ========================================= */
+
+.emergency-link {
+    display: block;
+
+    width: fit-content;
+    min-width: 150px;
+
+    background-color: #dc2626;
+    color: #ffffff !important;
+
+    text-decoration: none !important;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    text-align: center;
+
+    padding: 14px 22px;
+
+    margin-top: 12px;
+
+    border: 2px solid #b91c1c;
+    border-radius: 5px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+
+    transition: all 0.2s ease;
+}
+
+
+/* BUTTON HOVER */
+
+.emergency-link:hover {
+    background-color: #991b1b;
+    color: #ffffff !important;
+
+    border-color: #7f1d1d;
+
+    transform: translateX(4px);
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.18);
+}
+
+
+/* BUTTON FOCUS */
+
+.emergency-link:focus {
+    outline: 3px solid #f2b35f;
+    outline-offset: 3px;
+}
+
+
+/* =========================================
+   EMERGENCY CONTAINER
+   ========================================= */
+
+.emergency-container {
+    background-color: #f7f3e9;
+    padding: 0;
+}
+
+
+/* =========================================
+   CITY SECTION HEADINGS
+   ========================================= */
+
+section h2 {
+    color: #173f35;
+
+    font-size: 25px;
+
+    margin-top: 25px;
+    margin-bottom: 20px;
+
+    border-left: 5px solid #e8a044;
+    padding-left: 12px;
+}
+
+
+/* =========================================
+   EMERGENCY INFORMATION CARDS
+   ========================================= */
+
+.emergency-card {
+    background-color: #ffffff;
+
+    padding: 25px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #d8dfd5;
+    border-top: 5px solid #173f35;
+
+    border-radius: 4px;
+
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.06);
+
+    transition: 0.2s ease;
+}
+
+
+/* CARD HOVER */
+
+.emergency-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.10);
+}
+
+
+/* CARD TITLE */
+
+.emergency-card h3 {
+    color: #173f35;
+
+    font-size: 20px;
+
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+
+/* CARD TEXT */
+
+.emergency-card p {
+    color: #40574a;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin: 8px 0;
+}
+
+
+/* PHONE NUMBERS / LINKS */
+
+.emergency-card a {
+    color: #a85d12;
+
+    font-weight: bold;
+
+    text-decoration: underline;
+}
+
+.emergency-card a:hover {
+    color: #7c420d;
+}
+
+
+/* =========================================
+   PUBLIC / PRIVATE HOSPITAL HEADINGS
+   ========================================= */
+
+main > section > h2 {
+    margin-top: 30px;
+}
+
+
+/* =========================================
+   HORIZONTAL LINE
+   ========================================= */
+
+hr {
+    border: 0;
+
+    border-top: 2px solid #d8dfd5;
+
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   BACK TO CITY SELECTION
+   ========================================= */
+
+section > p > a {
+    display: inline-block;
+
+    color: #173f35;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    padding: 8px 12px;
+
+    border: 1px solid #a9c0ad;
+    border-radius: 4px;
+
+    background-color: #e7efe7;
+
+    transition: 0.2s ease;
+}
+
+section > p > a:hover {
+    background-color: #173f35;
+    color: #ffffff;
+
+    border-color: #173f35;
+}
+
+
+/* =========================================
+   SAFETY / MEDICAL REMINDER
+   ========================================= */
+
+.reminder {
+    background-color: #e7efe7;
+
+    padding: 25px;
+
+    margin-top: 30px;
+    margin-bottom: 25px;
+
+    border: 1px solid #b9cbb9;
+    border-left: 6px solid #173f35;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.reminder h2,
+.reminder h3 {
+    color: #173f35;
+
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.reminder p {
+    color: #40574a;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin: 10px 0;
+}
+
+.reminder a {
+    color: #a85d12;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   GENERAL LINKS
+   ========================================= */
+
+a {
+    color: #a85d12;
+}
+
+a:hover {
+    color: #7c420d;
+}
+
+
+/* =========================================
+   BACK TO HOMEPAGE
+   ========================================= */
+
+main > p:last-child {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+main > p:last-child a {
+    display: inline-block;
+
+    background-color: #173f35;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    padding: 11px 18px;
+
+    border: 2px solid #173f35;
+    border-radius: 5px;
+
+    transition: 0.2s ease;
+}
+
+main > p:last-child a:hover {
+    background-color: #0f2d26;
+
+    border-color: #0f2d26;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   BOTTOM INFORMATION
+   ========================================= */
+
+.bottom-note {
+    background-color: #173f35;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    padding: 20px;
+
+    border-top: 5px solid #e8a044;
+}
+
+.bottom-note p {
+    color: #ffffff;
+
+    font-size: 13px;
+
+    margin: 5px;
+}
+
+
+/* =========================================
+   MOBILE / SMALL SCREEN
+   ========================================= */
+
+@media screen and (max-width: 700px) {
+
+    header {
+        padding: 25px 20px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav {
+        padding: 10px;
+    }
+
+    nav a {
+        display: block;
+
+        margin: 5px 0;
+
+        width: 100%;
+    }
+
+    main {
+        margin: 20px auto;
+        padding: 0 12px;
+    }
+
+    .welcome {
+        padding: 22px;
+    }
+
+    .welcome h2 {
+        font-size: 23px;
+    }
+
+    .emergency-link {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .emergency-card {
+        padding: 20px;
+    }
+
+    .emergency-card h3 {
+        font-size: 18px;
+    }
+
+    section h2 {
+        font-size: 22px;
+    }
+
+}
